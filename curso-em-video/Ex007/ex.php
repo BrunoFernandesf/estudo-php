@@ -7,23 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Informe um número</h1>
-    </header>
     <main>
-        <?php
-            //Mostre o número escolhido
-            //O número antecessor
-            //O número sucessor
-            $num = $_GET["numero"];
-            $ant = $num -1;
-            $suc = $num +1;
+        <h1>Resultado Final</h1>
+        <p>
+            <?php
+                //Mostre o número escolhido
+                //O número antecessor
+                //O número sucessor
+                $num = $_GET["numero"];
 
-            echo "<p>O número escolhido foi <strong>$num</strong>\n</p>";
-            echo "<p>O seu antecessor é <strong>$ant</strong> \n</p>";
-            echo "<p>O seu sucessor é <strong>$suc</strong></p>";
-        ?>
-        <p><a href="javascript:history.go(-1)"><-- Voltar</a></p>
+                echo "O número escolhido foi <strong>$num</strong>";
+                echo "<br>O seu antecessor é " . ($num -1);
+                echo "<br>O seu sucessor é " . ($num +1);
+            ?>
+        </p>
+        <button onclick="javascript:window.location.href='index.html'">&#x2B05;Voltar</button>
     </main>
 </body>
 </html>
